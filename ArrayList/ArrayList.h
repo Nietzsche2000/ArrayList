@@ -22,7 +22,7 @@ struct ArrayList {
 
 typedef struct ArrayList ArrayList;
 
-ArrayList *constructor();
+ArrayList *constructorArrayList();
 
 uint32_t size(ArrayList *list);
 
@@ -32,6 +32,6 @@ type getItem(uint32_t index, ArrayList *list);
 
 void addFirst(type item, ArrayList *list);
 
-
+void delete(ArrayList *list);
 
 

@@ -5,7 +5,7 @@
 #include "ArrayList.h"
 
 /** MALLOC FAILED EXIT CODE 1 */
-ArrayList *constructor() {
+ArrayList *constructorArrayList() {
     ArrayList *list = (ArrayList *) malloc(sizeof(ArrayList));
     if (list == NULL) {
         printf("%s\n", "CANNOT CREATE LIST, MALLOC FAILED");
@@ -39,4 +39,15 @@ void addLast(type item, ArrayList *list) {
     list->size++;
 }
 
+uint32_t size(ArrayList *list) {
+    return list->size;
+}
 
+void delete(ArrayList *list) {
+    free(list->arr);
+    free(list);
+}
+
+type getItem(uint32_t index, ArrayList *list) {
+    return list->arr[index];
+}
