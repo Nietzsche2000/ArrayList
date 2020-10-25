@@ -12,3 +12,6 @@
 void assertTrue(uint8_t expr);
 
 void assertFalse(uint8_t expr);
+
+#define typeArrayEquals uint32_t
+void assertArrayEquals(typeArrayEquals *ptr, typeArrayEquals *ptr2, uint32_t size1);

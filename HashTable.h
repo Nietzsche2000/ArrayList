@@ -15,7 +15,7 @@
 #define startBucketNo 8
 
 typedef struct container {
-    uint32_t id;
+    int32_t id;
     char *string;
 } container;
 
@@ -29,7 +29,8 @@ typedef struct HashTable {
 
 HashTable *constructorHashTable();
 
-void addMap(uint32_t key, char *string);
+void addMap(int32_t key, char *string, HashTable *hashTable);
 
+uint32_t hashFunction(int32_t key, HashTable *hashTable);
 
-
+uint8_t contains(int32_t key, HashTable *hashTable);
