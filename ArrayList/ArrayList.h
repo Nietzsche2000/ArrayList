@@ -6,13 +6,17 @@
 #define QUESTCREVISION_ARRAYLIST_H
 
 #endif //QUESTCREVISION_ARRAYLIST_H
-
-#define type uint32_t
+#define type container*
 #define startSize 8
 
 #include <inttypes.h>
 #include <stdlib.h>
 #include <stdio.h>
+
+typedef struct container {
+    int32_t id;
+    char *string;
+} container;
 
 struct ArrayList {
     type *arr;
@@ -34,4 +38,5 @@ void addFirst(type item, ArrayList *list);
 
 void delete(ArrayList *list);
 
+uint8_t containsArrayList(uint32_t item, ArrayList *list);
 

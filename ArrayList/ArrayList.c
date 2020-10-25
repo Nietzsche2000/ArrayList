@@ -51,3 +51,11 @@ void delete(ArrayList *list) {
 type getItem(uint32_t index, ArrayList *list) {
     return list->arr[index];
 }
+
+uint8_t containsArrayList(uint32_t item, ArrayList *list) {
+    for (int i = 0; i < list->size; ++i) {
+        if (item == list->arr[i]->id)
+            return 1;
+    }
+    return 0;
+}
