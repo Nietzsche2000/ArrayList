@@ -44,3 +44,12 @@ void assertArrayEquals(typeArrayEquals *ptr, typeArrayEquals *ptr2, uint32_t siz
         assertTrue(ptr[i] == ptr2[i], withPrint);
     }
 }
+
+void assertNull(void *object, uint8_t withPrint) {
+     assertTrue(object == NULL, withPrint);
+}
+
+/** THIS MEANS BOTH POINT TO THE SAME OBJECT */
+void assertEquals(void *ptr1, void *ptr2, uint8_t withPrint) {
+    assertTrue(ptr1 == ptr2, withPrint);
+}
